@@ -38,6 +38,7 @@ require('./app/routes/note.routes.js')(app)
 require('./app/routes/user.routes.js')(app)
 require('./app/routes/booking.routes.js')(app)
 // listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+const port = process.env.port || 3000
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
 });
